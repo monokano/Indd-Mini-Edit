@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Typing and Sending">
+<title>Typing and Sending</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">Indd Mini-Edit Help</a> › Typing and Sending</p>
+<h1>Typing and Sending</h1>
+
+<h2>Typing</h2>
+<p>When the app launches, the input bar is ready for typing right away. InDesign stays in front, and you can use your Japanese input method as usual. If you click InDesign, just click the input bar to continue typing.</p>
+<p>You can use Cut (<kbd>⌘X</kbd>), Copy (<kbd>⌘C</kbd>), Paste (<kbd>⌘V</kbd>), Select All (<kbd>⌘A</kbd>), Undo (<kbd>⌘Z</kbd>), and Redo (<kbd>⇧⌘Z</kbd>).</p>
+<p>macOS features such as smart quotes, smart dashes, and automatic spelling correction are turned off. The text is sent to InDesign exactly as you typed it.</p>
+
+<h3>Typing multiple lines</h3>
+<p>Press <kbd>return</kbd> to start a new line (unless the send key is set to <kbd>return</kbd>). When typing multiple lines, drag the top edge of the input bar to make it taller and easier to read. In InDesign, each line break becomes a paragraph break.</p>
+
+<h3>Symbols for spaces and line breaks</h3>
+<p>In the input field, invisible characters are shown as pink symbols. The main symbols are:</p>
+<ul>
+  <li>Space: <strong>.</strong></li>
+  <li>Full-width space: <strong>□</strong></li>
+  <li>Tab: <strong>⇥</strong></li>
+  <li>Line break: <strong>¶</strong></li>
+  <li>No-break space: <strong>⌄</strong></li>
+  <li>Zero-width space and similar: <strong>¦</strong></li>
+</ul>
+<p>The symbols appear only in the input field. The original characters are sent to InDesign.</p>
+
+<h2>Sending to InDesign</h2>
+<p>When you’ve finished typing, press <kbd>⌥ + return</kbd> (the default). The selection in InDesign is replaced with what you typed, and Indd Mini-Edit quits.</p>
+<ul>
+  <li>After the replacement, the InDesign cursor is placed after the text you entered.</li>
+  <li>The formatting of the first character in the selection is applied to the text you entered.</li>
+  <li>Press <kbd>⌘Z</kbd> once in InDesign to go back to how it was before.</li>
+  <li>If the input field is empty, the app quits without doing anything.</li>
+</ul>
+<p>The send key works only when you press exactly the key combination you set. For example, if it’s <kbd>⌥ + return</kbd>, pressing <kbd>⌥⇧ + return</kbd> doesn’t send. It also doesn’t send while Japanese text is being converted (the key confirms the conversion instead). You can change the send key in the <a href="04_menu.html">menu</a>.</p>
+
+<h3>Which InDesign receives the text</h3>
+<p>The text you entered goes to the InDesign chosen in this order:</p>
+<ol class="steps">
+  <li>The InDesign in front</li>
+  <li>The InDesign that was most recently in front (if you haven’t switched to another InDesign since launching Indd Mini-Edit, the one that was in front at launch)</li>
+  <li>The InDesign whose window is frontmost on screen</li>
+  <li>If only one InDesign is running, that one</li>
+</ol>
+<p>Even if you switched to another app and InDesign is no longer in front, the text goes to the InDesign that was most recently in front, and that InDesign then comes to the front. If several versions of InDesign are running and the destination can’t be determined (for example, no InDesign window is visible on screen), “Bring InDesign to the front.” appears.</p>
+
+<h3>If the text couldn’t be sent</h3>
+<p>If the text couldn’t be sent to InDesign, a message appears in red above the input bar, and Indd Mini-Edit doesn’t quit. Your text stays in place, so fix the cause and send it again. For what each message means, see <a href="05_trouble.html">Permissions and Troubleshooting</a>.</p>
+
+<h2>Closing</h2>
+<p>To close without sending, do one of the following. Each one quits Indd Mini-Edit.</p>
+<ul>
+  <li>Click the close icon.</li>
+  <li>Press <kbd>esc</kbd>. (While Japanese text is being converted, this cancels the conversion.)</li>
+  <li>Press <kbd>⌘W</kbd> or <kbd>⌘Q</kbd>.</li>
+</ul>
+
+<h2>Auto-save</h2>
+<p>When Indd Mini-Edit quits, the text in the input field is saved automatically (whether you sent it or closed the app). If you closed by mistake, or want to reuse text you sent earlier, launch the app again and choose Load Auto-Saved Text from the <a href="04_menu.html">menu</a> to bring it back into the input field.</p>
+<ul>
+  <li>Only the contents from the last time the app quit are saved.</li>
+  <li>If the app quits with the input field empty, the saved text is cleared and Load Auto-Saved Text can’t be chosen.</li>
+</ul>
+
+<h2>Position and size of the input bar</h2>
+<p>The first time you launch the app, the input bar appears across the full width of the bottom of the screen.</p>
+<ul>
+  <li>To move it: drag its left end (around the close icon).</li>
+  <li>To resize it: drag any edge.</li>
+</ul>
+<p>The position and size are remembered, and the input bar appears in the same place the next time. If your display setup changes and the bar ends up off screen, it’s adjusted automatically to fit on screen. To return it to its original position, choose Position › Reset Position from the <a href="04_menu.html">menu</a>.</p>
+</body>
+</html>

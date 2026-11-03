@@ -1,0 +1,424 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "About Indd Mini-Edit": {
+      "comment": "App menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indd Mini-Editについて"
+          }
+        }
+      }
+    },
+    "Adjust Position": {
+      "comment": "Context menu > Position",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位置を調整"
+          }
+        }
+      }
+    },
+    "Allow Indd Mini-Edit to control InDesign in System Settings > Privacy & Security > Automation.": {
+      "comment": "Send message: Apple Events permission denied",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「システム設定」>「プライバシーとセキュリティ」>「オートメーション」で、Indd Mini-EditにInDesignの操作を許可してください"
+          }
+        }
+      }
+    },
+    "Back": {
+      "comment": "Help window toolbar (accessibility)",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "戻る"
+          }
+        }
+      }
+    },
+    "Bring InDesign to the front.": {
+      "comment": "Send message: frontmost app is not InDesign",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "InDesignを最前面にしてください"
+          }
+        }
+      }
+    },
+    "Close": {
+      "comment": "File menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "閉じる"
+          }
+        }
+      }
+    },
+    "Convert Alphanumerics to Full-Width": {
+      "comment": "Context menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "英数字を全角に"
+          }
+        }
+      }
+    },
+    "Convert Alphanumerics to Half-Width": {
+      "comment": "Context menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "英数字を半角に"
+          }
+        }
+      }
+    },
+    "Copy": {
+      "comment": "Edit menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コピー"
+          }
+        }
+      }
+    },
+    "Couldn't send the text to InDesign.": {
+      "comment": "Send message: Apple Event failed or timed out",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "InDesignにテキストを送れませんでした"
+          }
+        }
+      }
+    },
+    "Cut": {
+      "comment": "Edit menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カット"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "comment": "Edit menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除"
+          }
+        }
+      }
+    },
+    "Edit": {
+      "comment": "Main menu title",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編集"
+          }
+        }
+      }
+    },
+    "File": {
+      "comment": "Main menu title",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイル"
+          }
+        }
+      }
+    },
+    "Font": {
+      "comment": "Context menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フォント"
+          }
+        }
+      }
+    },
+    "Forward": {
+      "comment": "Help window toolbar (accessibility)",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "進む"
+          }
+        }
+      }
+    },
+    "Help": {
+      "comment": "Context menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ヘルプ"
+          }
+        }
+      }
+    },
+    "Hiragino Mincho ProN W3": {
+      "comment": "Context menu > Font (font name)",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ヒラギノ明朝 ProN W3"
+          }
+        }
+      }
+    },
+    "Hiragino Sans W3": {
+      "comment": "Context menu > Font (font name)",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ヒラギノ角ゴシック W3"
+          }
+        }
+      }
+    },
+    "Indd Mini-Edit Help": {
+      "comment": "Help window title",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indd Mini-Editヘルプ"
+          }
+        }
+      }
+    },
+    "Load Auto-Saved Text": {
+      "comment": "Context menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動保存を読み込む"
+          }
+        }
+      }
+    },
+    "No InDesign is running.": {
+      "comment": "Send message: no InDesign is running",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "起動しているInDesignがありません"
+          }
+        }
+      }
+    },
+    "No text is selected in the document.": {
+      "comment": "Send message: no text selection or insertion point",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ドキュメントでテキストが選択されていません"
+          }
+        }
+      }
+    },
+    "Paste": {
+      "comment": "Edit menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペースト"
+          }
+        }
+      }
+    },
+    "Position": {
+      "comment": "Context menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位置"
+          }
+        }
+      }
+    },
+    "Quit Indd Mini-Edit": {
+      "comment": "App menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indd Mini-Editを終了"
+          }
+        }
+      }
+    },
+    "Redo": {
+      "comment": "Edit menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "やり直す"
+          }
+        }
+      }
+    },
+    "Reset Position": {
+      "comment": "Context menu > Position",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リセット"
+          }
+        }
+      }
+    },
+    "Select All": {
+      "comment": "Edit menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてを選択"
+          }
+        }
+      }
+    },
+    "Send Key": {
+      "comment": "Context menu: key that sends the text to InDesign",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "入力キー"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "comment": "Accessibility name of the gear button below the close icon (no tooltip)",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
+          }
+        }
+      }
+    },
+    "Text Size": {
+      "comment": "Context menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文字サイズ"
+          }
+        }
+      }
+    },
+    "The auto-saved text is empty.": {
+      "comment": "Message (black): Load Auto-Saved Text found an empty file",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動保存は空です"
+          }
+        }
+      }
+    },
+    "The document window is minimized in the Dock.": {
+      "comment": "Send message: the active document window is minimized in the Dock",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ドキュメントウインドウがDockにしまわれています"
+          }
+        }
+      }
+    },
+    "There is no InDesign document.": {
+      "comment": "Send message: InDesign has no document",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "InDesignドキュメントがありません"
+          }
+        }
+      }
+    },
+    "Undo": {
+      "comment": "Edit menu",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取り消す"
+          }
+        }
+      }
+    },
+    "Yu Gothic Medium": {
+      "comment": "Context menu > Font (font name)",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "游ゴシック体 ミディアム"
+          }
+        }
+      }
+    },
+    "Yu Mincho Medium": {
+      "comment": "Context menu > Font (font name)",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "游明朝体 ミディアム"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

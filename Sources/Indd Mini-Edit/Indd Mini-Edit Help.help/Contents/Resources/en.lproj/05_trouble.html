@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Permissions and Troubleshooting">
+<title>Permissions and Troubleshooting</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+<p class="breadcrumb"><a href="index.html">Indd Mini-Edit Help</a> › Permissions and Troubleshooting</p>
+<h1>Permissions and Troubleshooting</h1>
+
+<h2>Allowing automation (Apple events)</h2>
+<p>To place text into InDesign, Indd Mini-Edit needs permission for automation (Apple events). The first time you send text, a dialog asks for permission; choose Allow.</p>
+<p>If you didn’t allow it, a message asking for permission appears when you send. Open System Settings › Privacy &amp; Security › Automation, and turn on InDesign under Indd Mini-Edit.</p>
+<div class="note">
+  <strong>Note</strong>
+  Indd Mini-Edit doesn’t need Accessibility permission.
+</div>
+
+<h2>What the messages mean</h2>
+<p>If the text couldn’t be sent to InDesign, a message appears in red above the input bar. Your text is still there, so fix the cause and send it again.</p>
+<dl>
+  <dt>No InDesign is running.</dt>
+  <dd>InDesign isn’t running. Open InDesign, select some text, then send.</dd>
+
+  <dt>Bring InDesign to the front.</dt>
+  <dd>The destination InDesign couldn’t be determined (for example, several versions are running and no InDesign window is visible on screen). Click the InDesign you want to send to so it comes to the front, then click the input bar and send.</dd>
+
+  <dt>There is no InDesign document.</dt>
+  <dd>No document is open in InDesign. Open a document, select some text, then send.</dd>
+
+  <dt>No text is selected in the document.</dt>
+  <dd>No text is selected in InDesign, or the cursor isn’t in the text (including when an object such as a text frame is selected). Select the text where you want to enter, or place the cursor in the text, then send.</dd>
+
+  <dt>The document window is minimized in the Dock.</dt>
+  <dd>The active document window of the destination InDesign is minimized in the Dock. The text wasn’t sent, so it doesn’t go into a document you can’t see. Restore the window from the Dock, then send. This message also appears if the window is in another desktop space.</dd>
+
+  <dt>Allow Indd Mini-Edit to control InDesign in System Settings &gt; Privacy &amp; Security &gt; Automation.</dt>
+  <dd>Automation isn’t allowed. See “Allowing automation (Apple events)” above.</dd>
+
+  <dt>Couldn’t send the text to InDesign.</dt>
+  <dd>The text couldn’t be sent, for example because InDesign didn’t respond. Check that InDesign isn’t busy (for example, that no dialog is open), then send again.</dd>
+</dl>
+
+<h2>When something doesn’t work</h2>
+<dl>
+  <dt>Pressing the send key doesn’t send</dt>
+  <dd>Make sure you’re pressing exactly the send key combination you set (it doesn’t send if other modifier keys are held down). It doesn’t send while Japanese text is being converted, so confirm the conversion first. You can check the current send key under Send Key in the <a href="04_menu.html">menu</a>.</dd>
+
+  <dt>Can’t start a new line in the input field</dt>
+  <dd>When the send key is <kbd>return</kbd>, you can’t start a new line. To use line breaks, choose <kbd>⌥ + return</kbd> or <kbd>⌘ + return</kbd> under Send Key in the <a href="04_menu.html">menu</a>.</dd>
+
+  <dt>Can’t find the input bar</dt>
+  <dd>The input bar may be off screen. Relaunch Indd Mini-Edit, and it’s adjusted to fit on screen.</dd>
+
+  <dt>Closed by mistake</dt>
+  <dd>Launch the app again and choose Load Auto-Saved Text from the <a href="04_menu.html">menu</a> to bring back the text from before you closed.</dd>
+</dl>
+</body>
+</html>
