@@ -579,6 +579,22 @@ final class InputPanelController: NSObject, NSLayoutManagerDelegate {
     func show() {
         panel.restoreFrame()
         focus()
+        suppressLaunchSpace()
+    }
+
+    /// 起動直後に「かな」キーを素早く押すと欧文スペースが1つ入ってしまう（keyDown で捨てても直らなかった）。
+    /// 起動から少しの間に入力欄が「欧文スペース1つだけ」になったら削除して空に戻す（2026-11-06）。
+    private func suppressLaunchSpace() {
+        let center = NotificationCenter.default
+        var token: NSObjectProtocol?
+        token = center.addObserver(forName: NSText.didChangeNotification, object: textView, queue: .main) { [weak self] _ in
+            guard let self, self.textView.string == " " else { return }
+            self.textView.string = ""
+            self.textView.undoManager?.removeAllActions()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if let token { center.removeObserver(token) }
+        }
     }
 
     /// 入力バーをキーにし、入力欄にフォーカスする（起動直後に自分を非アクティブにしたあとにも呼ぶ＝AppDelegate）。
