@@ -205,6 +205,32 @@ final class InputTextView: NSTextView {
         super.keyDown(with: event)
     }
 
+    // MARK: 改行を入力しない（2026-11-07 追加）
+
+    /// 「改行を入力しない」の設定値。
+    var disallowLineBreaks = true
+
+    /// キー操作の改行を止めるか。入力キーが return 単独のときは常に止める（⇧return 等でも改行させない）。
+    /// IME の変換中の return は確定に使われ、ここへは来ない。ペースト・自動保存の読み込みは止めない。
+    var blocksLineBreaks: Bool { disallowLineBreaks || sendKey == .returnOnly }
+
+    // return・⇧return・⌃return・⌥return・⌃O 等、キー操作の改行はこれらのアクションに届く。
+    override func insertNewline(_ sender: Any?) {
+        if !blocksLineBreaks { super.insertNewline(sender) }
+    }
+
+    override func insertLineBreak(_ sender: Any?) {
+        if !blocksLineBreaks { super.insertLineBreak(sender) }
+    }
+
+    override func insertParagraphSeparator(_ sender: Any?) {
+        if !blocksLineBreaks { super.insertParagraphSeparator(sender) }
+    }
+
+    override func insertNewlineIgnoringFieldEditor(_ sender: Any?) {
+        if !blocksLineBreaks { super.insertNewlineIgnoringFieldEditor(sender) }
+    }
+
     // MARK: 右クリックメニュー（ステップ7）
 
     /// 右クリックメニューを作る（InputPanelController.contextMenu。ContextMenu.swift）。
@@ -425,6 +451,7 @@ final class InputPanelController: NSObject, NSLayoutManagerDelegate {
         textView.contextMenuProvider = { [weak self] in self?.contextMenu() ?? NSMenu() }
         // 環境設定（ステップ8）からフォント・サイズ・入力キーを復元する。
         textView.sendKey = Settings.sendKey
+        textView.disallowLineBreaks = Settings.disallowLineBreaks
         applyFont(name: Settings.fontName, size: Settings.fontSize)
     }
 
@@ -588,9 +615,12 @@ final class InputPanelController: NSObject, NSLayoutManagerDelegate {
         let center = NotificationCenter.default
         var token: NSObjectProtocol?
         token = center.addObserver(forName: NSText.didChangeNotification, object: textView, queue: .main) { [weak self] _ in
-            guard let self, self.textView.string == " " else { return }
-            self.textView.string = ""
-            self.textView.undoManager?.removeAllActions()
+            // queue: .main なのでメインスレッドで呼ばれる。Swift 5 モードの Sendable 警告を避けるため assumeIsolated で包む。
+            MainActor.assumeIsolated {
+                guard let self, self.textView.string == " " else { return }
+                self.textView.string = ""
+                self.textView.undoManager?.removeAllActions()
+            }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if let token { center.removeObserver(token) }

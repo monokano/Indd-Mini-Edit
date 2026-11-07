@@ -110,6 +110,12 @@ extension InputPanelController: NSMenuItemValidation {
             keyItem.state = inputTextView.sendKey == key ? .on : .off
             keyMenu.addItem(keyItem)
         }
+        // 改行を入力しない（2026-11-07 追加）。入力キーが return 単独のときは常に改行できないので、
+        // チェックを付けてグレーアウトする（validateMenuItem）。
+        keyMenu.addItem(.separator())
+        let lineBreakItem = item(String(localized: "Disallow Line Breaks"), #selector(toggleDisallowLineBreaks(_:)))
+        lineBreakItem.state = inputTextView.blocksLineBreaks ? .on : .off
+        keyMenu.addItem(lineBreakItem)
         menu.addItem(submenuItem(String(localized: "Send Key"), keyMenu))
 
         // 位置 ▸
@@ -155,6 +161,8 @@ extension InputPanelController: NSMenuItemValidation {
             return NSFont(name: MenuFont.all[menuItem.tag].postScriptName, size: 12) != nil
         case #selector(loadAutoSavedText(_:)):
             return AutoSave.exists
+        case #selector(toggleDisallowLineBreaks(_:)):
+            return inputTextView.sendKey != .returnOnly
         case #selector(convertToFullWidth(_:)), #selector(convertToHalfWidth(_:)):
             return textView.selectedRanges.contains { $0.rangeValue.length > 0 }
         default:
@@ -189,6 +197,11 @@ extension InputPanelController: NSMenuItemValidation {
     @objc private func selectSendKey(_ sender: NSMenuItem) {
         inputTextView.sendKey = SendKey.menuOrder[sender.tag]
         Settings.sendKey = inputTextView.sendKey
+    }
+
+    @objc private func toggleDisallowLineBreaks(_ sender: NSMenuItem) {
+        inputTextView.disallowLineBreaks.toggle()
+        Settings.disallowLineBreaks = inputTextView.disallowLineBreaks
     }
 
     @objc private func adjustPosition(_ sender: NSMenuItem) {

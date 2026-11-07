@@ -18,6 +18,7 @@ enum Settings {
         static let fontName = "FontName"   // フォント（PostScript 名）
         static let fontSize = "FontSize"   // 文字サイズ
         static let sendKey = "SendKey"     // 入力キー（SendKey.rawValue＝旧版 Modifiers と同じ値）
+        static let disallowLineBreaks = "DisallowLineBreaks"  // 改行を入力しない（2026-11-07 追加）
     }
 
     static func registerDefaults() {
@@ -25,6 +26,7 @@ enum Settings {
             Key.fontName: InputPanelController.defaultFontName,
             Key.fontSize: Double(InputPanelController.defaultFontSize),
             Key.sendKey: SendKey.default.rawValue,
+            Key.disallowLineBreaks: true,   // 既定は ON（ユーザー指定 2026-11-07）
         ])
     }
 
@@ -45,5 +47,11 @@ enum Settings {
     static var sendKey: SendKey {
         get { UserDefaults.standard.string(forKey: Key.sendKey).flatMap(SendKey.init(rawValue:)) ?? .default }
         set { UserDefaults.standard.set(newValue.rawValue, forKey: Key.sendKey) }
+    }
+
+    /// 改行を入力しない（キー操作の改行だけ止める。ペースト・自動保存の読み込みは止めない）。
+    static var disallowLineBreaks: Bool {
+        get { UserDefaults.standard.bool(forKey: Key.disallowLineBreaks) }
+        set { UserDefaults.standard.set(newValue, forKey: Key.disallowLineBreaks) }
     }
 }

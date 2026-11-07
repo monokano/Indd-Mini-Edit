@@ -46,6 +46,7 @@ body {
     background: var(--bg);
     padding: 28px 32px 48px;
     max-width: 720px;
+    text-autospace: normal;   /* 和欧間は WebKit が自動で空ける（HTML に欧文スペースを書かない） */
 }
 
 /* ── Typography ── */

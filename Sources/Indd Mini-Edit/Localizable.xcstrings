@@ -133,6 +133,17 @@
         }
       }
     },
+    "Disallow Line Breaks": {
+      "comment": "Context menu > Send Key: toggle that blocks typing line breaks",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "改行を入力しない"
+          }
+        }
+      }
+    },
     "Edit": {
       "comment": "Main menu title",
       "localizations": {
